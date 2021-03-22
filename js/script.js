@@ -10,18 +10,24 @@ var listaMail = ['sognodinverno@gmail.com', 'cerebrolesi@gmail.com', 'chelansias
 
 
  //controllo che la mail sia nella lista di chi può accedere
+var mailOk = false;
 
- 
 for ( var i=0; i<listaMail.length; i++) {
     var mailCheck = listaMail[i];
-    console.log(mailCheck); 
-    
+
     if ( mailUtente == mailCheck) {
-        alert('Ciao!' + mailUtente);
-    }else {
-        alert('mi dispiace non sei sulla lista');
-    }
-  
+        mailOk = true;
+        console.log(mailOk)
+    } else {
+        mailOk = false;
+        console.log(mailOk)
+    }      
+}
+
+ if (mailOk) {
+     alert('Ok la mail è giusta');
+ } else {
+    alert ('La mail non è giusta');
 }
 
 
